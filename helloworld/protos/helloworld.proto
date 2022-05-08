@@ -1,0 +1,17 @@
+syntax = "proto3";
+ 
+option go_package = "grpc_learning/helloworld/protos";
+
+package helloworld;
+
+service HelloWorld {
+    rpc EchoHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string msg = 1;
+}
