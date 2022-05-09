@@ -34,5 +34,5 @@ func EchoHello(client pb.HelloWorldClient) {
 	if err != nil {
 		log.Fatalf("error %v", err)
 	}
-	fmt.Println("Received: %v", res)
+	fmt.Printf("Received: %v", res.Msg)
 }
